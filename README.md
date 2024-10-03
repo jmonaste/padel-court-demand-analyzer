@@ -13,7 +13,7 @@ The **demand-paddle** database is designed to manage and analyze the availabilit
    - **Phone**: Contact number for the club.
    - **Playtomic URL**: A base URL used to query availability data on Playtomic. This URL will later be appended with the specific date (day, month, year) for which availability is being checked.
 
-   ![Club table](images/1.png)
+   ![Club table](imgs/1.png)
 
 
 2. **PISTA Table**:
