@@ -1,0 +1,5 @@
+# Ignorar la carpeta ligs
+logs/
+
+# Ignorar la carpeta dbeaver_scripts
+dbeaver_scripts/
