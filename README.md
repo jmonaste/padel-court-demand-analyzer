@@ -1,5 +1,41 @@
 # Padel Court Demand Analyzer in Playtomic
 
+### Overview
+
+The **demand-paddle** database is designed to manage and analyze the availability of padel courts across various clubs. It consists of three main tables that store essential information for processing court availability requests.
+
+### Database Structure
+
+1. **CLUB Table**:
+   - **ID**: Unique identifier for each club.
+   - **Name**: The name of the club.
+   - **Location**: The geographical location of the club.
+   - **Phone**: Contact number for the club.
+   - **Playtomic URL**: A base URL used to query availability data on Playtomic. This URL will later be appended with the specific date (day, month, year) for which availability is being checked.
+
+   ![Club table](images/1.png)
+
+
+2. **PISTA Table**:
+   - **ID**: Unique identifier for each court.
+   - **Club ID**: References the corresponding club in the CLUB table.
+   - **Name**: The name assigned to the court by the club.
+   - **Type**: Indicates whether the court is indoor (covered) or outdoor (uncovered), which allows for various analyses.
+   - **Dimensions**: Provides the dimensions of the court, facilitating further analytical processes.
+
+3. **DISPONIBILIDAD Table**:
+   - **ID**: Unique identifier for each availability record.
+   - **Court ID**: References the specific court in the PISTA table.
+   - **Query Date and Time**: The date and time at which the availability is checked.
+   - **Reservation Date**: The specific date for which availability is being queried.
+   - **Start Time**: The time at which a reservation can begin.
+   - **Duration**: Duration of the reservation in hours, extracted from Playtomic's data.
+
+### Functionality
+
+This database structure enables efficient querying and management of padel court availability across different clubs. By leveraging the Playtomic API, the system retrieves and stores real-time availability data, allowing users to analyze trends and make informed decisions about court usage.
+
+
 ## Description
 
 This project aims to analyze the demand for padel courts in clubs on the Playtomic platform. It uses Selenium to automate the collection of data regarding court availability, storing the information in a PostgreSQL database.
