@@ -23,6 +23,8 @@ The **demand-paddle** database is designed to manage and analyze the availabilit
    - **Type**: Indicates whether the court is indoor (covered) or outdoor (uncovered), which allows for various analyses.
    - **Dimensions**: Provides the dimensions of the court, facilitating further analytical processes.
 
+   ![Pista table](imgs/2.png)
+
 3. **DISPONIBILIDAD Table**:
    - **ID**: Unique identifier for each availability record.
    - **Court ID**: References the specific court in the PISTA table.
@@ -30,6 +32,8 @@ The **demand-paddle** database is designed to manage and analyze the availabilit
    - **Reservation Date**: The specific date for which availability is being queried.
    - **Start Time**: The time at which a reservation can begin.
    - **Duration**: Duration of the reservation in hours, extracted from Playtomic's data.
+
+   ![Disponibilidad table](imgs/3.png)
 
 ### Functionality
 
